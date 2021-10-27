@@ -12,4 +12,3 @@ class Category(Model):
         ordering = ("name",)
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
-
