@@ -1,10 +1,8 @@
 from django.db.models import Model, ForeignKey, CharField, SlugField, TextField, DecimalField, PositiveIntegerField, \
     DateTimeField, BooleanField, CASCADE
-from .category import Category
 
 
 class Product(Model):
-    category = ForeignKey(Category, related_name="Products", default="", null=False, on_delete=CASCADE, blank=False)
     name = CharField(verbose_name="Name Product", default="", max_length=100, blank=False)
     slug = SlugField(verbose_name="Slug", default="", max_length=100, blank=False)
     description = TextField(verbose_name="Description", default="", max_length=100, blank=False)

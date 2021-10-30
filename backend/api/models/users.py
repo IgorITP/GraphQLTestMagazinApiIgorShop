@@ -2,6 +2,7 @@ from django.db.models import CharField, Model, EmailField, DateTimeField
 from django.utils.timezone import now
 
 
+
 class Users(Model):
     username = CharField(verbose_name='Login', default="", max_length=100, blank=False)
     password = CharField(verbose_name="Password", default="", max_length=100, blank=False)
@@ -10,8 +11,9 @@ class Users(Model):
     create_at = DateTimeField(verbose_name="Registration Data", default=now)
 
     def __str__(self):
-        return self.email
+        return self.username
 
     class Meta:
         verbose_name = "User"
         verbose_name_plural = "Users"
+

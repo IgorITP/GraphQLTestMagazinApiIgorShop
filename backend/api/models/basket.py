@@ -3,7 +3,7 @@ from .users import Users
 
 
 class Basket(Model):
-    user = ForeignKey(Users, verbose_name='Users', default="", null=False, on_delete=CASCADE, blank=False)
+    user = ForeignKey(Users, related_name='basket', default="", null=False, on_delete=CASCADE, blank=False)
     product = CharField(verbose_name="Product", default="", max_length=100, blank=False)
     quantity = CharField(verbose_name="Quantity", default="", max_length=100, blank=False)
 

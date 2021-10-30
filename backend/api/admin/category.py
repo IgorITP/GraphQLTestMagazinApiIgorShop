@@ -6,4 +6,3 @@ from ..models import Category
 class CategoryAdminForm(ModelAdmin):
     list_display = ('name', 'slug')
     prepopulated_fields = {"slug": ("name",)}
-
