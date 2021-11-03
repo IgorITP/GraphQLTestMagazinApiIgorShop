@@ -2,7 +2,6 @@ from django.db.models import CharField, Model, EmailField, DateTimeField
 from django.utils.timezone import now
 
 
-
 class Users(Model):
     username = CharField(verbose_name='Login', default="", max_length=100, blank=False)
     password = CharField(verbose_name="Password", default="", max_length=100, blank=False)
@@ -16,4 +15,3 @@ class Users(Model):
     class Meta:
         verbose_name = "User"
         verbose_name_plural = "Users"
-

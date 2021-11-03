@@ -8,4 +8,6 @@ class GetBasketQuery(graphene.ObjectType):
 
     def resolve_get_basket(self, info):
         print('info:', info)
-        return Basket.objects.all()
+        if info.get('username', False):
+            return Basket.objects.all()
+        return None

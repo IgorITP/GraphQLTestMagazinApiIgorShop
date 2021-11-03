@@ -21,4 +21,3 @@ class Query(ApiQuery, graphene.ObjectType):
 
 
 schema = graphene.Schema(query=Query, mutation=Mutation)
-

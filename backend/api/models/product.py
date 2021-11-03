@@ -3,6 +3,7 @@ from django.db.models import Model, ForeignKey, CharField, SlugField, TextField,
 
 
 class Product(Model):
+    objects = None
     name = CharField(verbose_name="Name Product", default="", max_length=100, blank=False)
     slug = SlugField(verbose_name="Slug", default="", max_length=100, blank=False)
     description = TextField(verbose_name="Description", default="", max_length=100, blank=False)

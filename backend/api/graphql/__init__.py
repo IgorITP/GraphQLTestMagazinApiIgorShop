@@ -2,7 +2,7 @@ from .user.user_mutations import UserMutation
 from .user.get_me_query import GetMeQuery
 
 from .basket.get_basket_query import GetBasketQuery
-from .category.get_category_query import GetCategoryQuery
+from .product.query_get_list_product import GetProductQuery
 
 
 class ApiQuery(
@@ -26,4 +26,3 @@ def check_auth_token(function_to_decorate):
         print('DONE')
 
     return the_wrapper_around_the_original_function
-
