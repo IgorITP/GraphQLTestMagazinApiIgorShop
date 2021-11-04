@@ -8,8 +8,6 @@ class Mutation(ApiMutation, graphene.ObjectType):
     alive = graphene.Boolean()
 
     def resolve_alive(self, info):
-        print('info', info.field_name)
-        print(type(ApiMutation.user_registration_mutation))
         return True
 
 
