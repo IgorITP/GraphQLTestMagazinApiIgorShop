@@ -16,13 +16,3 @@ class ApiMutation(
     UserMutation
 ):
     pass
-
-
-def check_auth_token(function_to_decorate):
-    def the_wrapper_around_the_original_function(*args, **kwargs):
-        print('args', args)
-        print('kwargs', kwargs)
-        function_to_decorate(*args, **kwargs)
-        print('DONE')
-
-    return the_wrapper_around_the_original_function
