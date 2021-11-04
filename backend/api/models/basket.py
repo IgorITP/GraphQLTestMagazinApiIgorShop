@@ -10,5 +10,6 @@ class Basket(Model):
     def __str__(self):
         return self.user
 
-    verbose_name = "Basket"
-    verbose_name_plural = "Baskets"
+    class Meta:
+        verbose_name = "Basket"
+        verbose_name_plural = "Baskets"
